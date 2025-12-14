@@ -25,7 +25,7 @@ body {
 
 .site-banner {
   width: 100%;
-  height: 15vh;
+  height: 20vh;
   min-height: 120px;
   max-height: 220px;
 
@@ -44,7 +44,7 @@ body {
 .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(230, 242, 255, 0.7); /* baby blue overlay */
+  background: rgba(201, 226, 253, 0.4); /* baby blue overlay */
   z-index: 1;
 }
 
@@ -55,7 +55,7 @@ body {
 
   font-size: 6rem;
   letter-spacing: 0.25rem;
-  font-weight: 500;
+  font-weight: 300;
   color: #1f2933;
 }
 
@@ -72,13 +72,19 @@ body {
 
 .content h2 {
   font-size: 3rem;
+  font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
-.content p {
+.content p, li, ul {
   font-size: 1.6rem;
   max-width: 600px;
   margin: 0 auto;
+  text-align: left;
+}
+
+.headshot-picture {
+    float: left
 }
 
 /* ------------------------------
