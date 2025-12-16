@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <title>Emad Haskett | Software Engineer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+
+    <header class="site-banner">
+        <div class="banner-overlay"></div>
+        <h1>HOME</h1>
+    </header>
+
+    <nav><div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="about.html">Who I am</a>
+    <a href="contact.html">Contact</a>
+    </div></nav>
+
+    <main class="content">
+        <section class="content-section fade-section">
+            <div class="section-card">
+
+                <h2 class="section-header">About Me</h2>
+
+                <div class="section-body">
+                    <img class="section-image" src="images/headshot.jpeg" alt="Headshot of Emad Haskett"/>
+
+                    <div class="section-text">
+                        <p>
+                        My name is Emad Haskett, though I go by Aleks. I currently work as a backend engineer but
+                        have worked on projects integrating front end desing as well.
+                        <br/><br/>
+                        I lived most of my life abroad, having lived in 9 countries so far. I have been living in the
+                        United States since 2020 when I returned to Washington D.C. for college.
+                        <br/><br/>
+                        Outside of engineering some of my hobbies include running, spending time outdoors, 
+                        traveling, spending time with friends and family, and gaming (Baldur's Gate and Stardew 
+                        Valley are my recent favorites).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section fade-section">
+            <div class="section-card">
+
+                <h2 class="section-header">Experience</h2>
+
+                <div class="section-body">
+                    <img class="section-image" src="" alt="Experience Photo" />
+
+                    <div class="section-text">
+                        <p>
+                        I have 3 years of experience working primarily on backend and cloud-based systems, 
+                        with exposure to enterprise-scale and regulated financial environments.<br><br>
+
+                        At J.P. Morgan Chase & Co., I’ve contributed to modernizing legacy systems and building 
+                        maintainable, fault-tolerant services that support 15,000+ credit applications per day. 
+                        My work involves collaborating across multiple teams, translating business and client 
+                        requirements into technical solutions, and ensuring systems meet high standards for 
+                        availability, performance, and security. <br><br>
+                        
+                        Previously, I worked on proof-of-concepts involving stream processing, distributed systems,
+                        and cloud infrastructure, and contributed to research in low-power AI hardware and neural 
+                        network optimization during my time at George Washington University.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="content-section fade-section">
+            <div class="section-card">
+
+                <h2 class="section-header">Skills and Technologies</h2>
+
+                <div class="section-body">
+                    <img class="section-image" src="" alt="Experience Photo" />
+                    <div class="section-text">
+                        <p>Backend and Distrbuted Systems:</p>
+                        <li>Java, Python, C, C++</li>
+                        <li>Spring, Apache Kafka, Apache Flink.</li>
+                        
+                        <p><br>Cloud & DevOps:</p>
+                        <li>AWS, CI/CD pipelines, Terraform, Docker, Kubernetes (EKS), Gaia.</li>
+                        
+                        <p><br>Frontend (Working Knowledge):</p>
+                        <li>HTML5, React, Javascript, CSS, Kotlin, React</li>
+                        
+                        <p><br>Tools & Research:</p>
+                        <li>PyTorch, TensorFlow, MATLAB, Mathematica, Verilog</li>
+                        
+                        <p><br>Languages:</p>
+                        <li>English (Native)</li>
+                        <li>German (A2), Arabic (A1), Spanish (A1)</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    </body>
+</html>
+
+<script>
+  const sections = document.querySelectorAll(".fade-section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.3
+    }
+  );
+
+  sections.forEach(section => observer.observe(section));
+</script>
