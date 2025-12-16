@@ -9,3 +9,4 @@ All the best,
 Emad (Aleks) Haskett
 
 ## Information:
+This is a pretty simple website. It is built using almost entirely HTML and CSS for elements and styling with some javascript utilized for animations/button etc.
