@@ -10,12 +10,11 @@
 
 html {
   font-size: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  /* background-color: #ffffff; */
-  background-color: #d4e4f5;
+  background-color: #192643;
   color: #1f2933;
   line-height: 1.6;
 }
@@ -30,7 +29,6 @@ body {
   min-height: 120px;
   max-height: 220px;
 
-  background-image: url("images/Foggy_Mountain.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,7 +42,6 @@ body {
 .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(201, 226, 253, 0.4);
   z-index: 1;
 }
 
@@ -52,10 +49,30 @@ body {
   position: relative;
   z-index: 2;
 
-  font-size: 6rem;
+  font-size: 10rem;
   letter-spacing: 0.25rem;
   font-weight: 300;
-  color: #1f2933;
+  color: #E5E7EB;
+  
+  font-family: "Playfair Display", sans-serif;
+}
+
+.navigation-button{
+    position: fixed;
+    top: 2vh;
+    right: 2vh;
+
+    width: 6vh;
+    height: 6vh;
+    color: #ffffff;
+
+    border-radius: 5px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-color: #ffffff;
+
+    background-image: url("images/menu-icon.png");
+    background-size: cover;
+    background-position: center;
 }
 
 /* ------------------------------
@@ -80,37 +97,6 @@ body {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
-}
-
-/* ------------------------------
-   Navigation Bar
------------------------------- */
-
-.topnav {
-  background-color: #ffffff;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: #1f2933;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #5996d4;
-    color: white;
 }
 
 /* ------------------------------
@@ -162,8 +148,8 @@ body {
 }
 .fade-section {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .fade-section.visible {
