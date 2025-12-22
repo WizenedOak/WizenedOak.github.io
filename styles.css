@@ -193,20 +193,63 @@ body {
    Responsive Adjustments
 ------------------------------ */
 
+/*Tablet Sizing*/
 @media (max-width: 768px) {
+    /*banner format*/
     .site-banner {
-        height: 20vh;
+        height: 25vh;
+        min-height: 210px;
+    }
+
+    .banner-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .banner-image {
+        width: 15vh;
+        height: 15vh;
+
+        min-width:120px;
+        min-height:120px;
+        margin: 0 auto;
     }
 
     .site-banner h1 {
-        font-size: 4.5rem;
+        font-size: 2.3rem;
+        text-align:left;
+    }
+
+    .site-banner h2 {
+        font-size: 1.8rem;
+        text-align:left;
+    }
+
+    .site-banner p {
+        font-size: 1rem;
+        text-align:left;
     }
 
     .content {
-        margin: 3rem auto;
+        margin: auto auto;
+    }
+
+    /*Section cards format*/
+    .section-body {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .section-image {
+        margin: 0 auto;
+    }
+
+    .section-text {
+        text-align: left;
     }
 }
 
+/*Small phone sizing*/
 @media (max-width: 480px) {
     .site-banner {
         height: 25vh;
@@ -223,20 +266,5 @@ body {
 
     .content p {
         font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .section-body {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .section-image {
-        margin: 0 auto;
-    }
-
-    .section-text {
-        text-align: left;
     }
 }
