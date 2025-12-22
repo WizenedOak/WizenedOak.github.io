@@ -249,6 +249,24 @@ body {
     }
 }
 
+/*Smartphone sizing*/
+@media (max-width:600px){
+    .site-banner h1 {
+        font-size: 2rem;
+        text-align:left;
+    }
+
+    .site-banner h2 {
+        font-size: 1.5rem;
+        text-align:left;
+    }
+
+    .site-banner p {
+        font-size: 0.9rem;
+        text-align:left;
+    }
+}
+
 /*Small phone sizing*/
 @media (max-width: 480px) {
     .site-banner {
