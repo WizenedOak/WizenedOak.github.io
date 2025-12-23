@@ -25,8 +25,7 @@ body {
 .site-banner {
     width: 100%;
     background-color: #192643;
-
-    padding: clamp(1.5rem, 4vh, 3rem) 2rem;
+    padding: clamp(1.5rem, 4vh, 3rem) 1.5rem;
 
     display: flex;
     justify-content: center;
@@ -36,7 +35,7 @@ body {
     width: 100%;
 
     display: grid;
-    grid-template-columns: auto, auto;
+    grid-template-columns: auto auto;
     column-gap: 2.5rem;
 
     align-items: center;
@@ -44,21 +43,21 @@ body {
 }
 
 .banner-image {
-  grid-column: 1;
-  grid-row: 1;
+    grid-column: 1;
+    grid-row: 1;
 
-  width: 30vh;
-  height: 30vh;
+    width: clamp(96px, 18vw, 160px);
+    height: clamp(96px, 18vw, 160px);
 
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ffffff;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
 
 }
 
 .banner-text {
-  grid-column: 2;
-  grid-row: 1;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .banner-text h1 {
@@ -196,23 +195,18 @@ body {
 /*Tablet Sizing*/
 @media (max-width: 768px) {
     /*banner format*/
-    .site-banner {
-        height: 25vh;
-        min-height: 210px;
-    }
-
     .banner-content {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
         text-align: center;
     }
 
     .banner-image {
-        width: 15vh;
-        height: 15vh;
-
-        min-width:120px;
-        min-height:120px;
         margin: 0 auto;
+    }
+
+    .banner-text {
+        margin-top: 1rem;
     }
 
     .site-banner h1 {
@@ -269,15 +263,15 @@ body {
 
 /*Small phone sizing*/
 @media (max-width: 480px) {
-    .site-banner {
-        height: 25vh;
+    .banner-text h1 {
+        font-size: 1.8rem;
     }
 
-    .content h2 {
-        font-size: 2.4rem;
+    .banner-text h2 {
+        font-size: 1.3rem;
     }
 
-    .content p {
-        font-size: 1.5rem;
+    .banner-text p {
+        font-size: 0.7rem;
     }
 }
