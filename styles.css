@@ -1,6 +1,7 @@
-/* ------------------------------
+/* --------------------
    Global Styles
------------------------------- */
+-------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Workbench&display=swap');
 
 * {
     box-sizing: border-box;
@@ -18,260 +19,91 @@ body {
     line-height: 1.6;
 }
 
-/* ------------------------------
-   Banner / Header
------------------------------- */
-
-.site-banner {
-    width: 100%;
-    background-color: #192643;
-    padding: clamp(1.5rem, 4vh, 3rem) 1.5rem;
-
+header{
     display: flex;
-    justify-content: center;
-}
-
-.banner-content {
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 2.5rem;
-
-    align-items: center;
-    color: #E5E7EB;
-}
-
-.banner-image {
-    grid-column: 1;
-    grid-row: 1;
-
-    width: clamp(96px, 18vw, 160px);
-    height: clamp(96px, 18vw, 160px);
-
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ffffff;
-
-}
-
-.banner-text {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.banner-text h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    margin: 0;
-    color: #E5E7EB;
-}
-
-.banner-text h2 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin: 0;
-    color: #CBD5E1;
-}
-
-.banner-text p {
-    font-size: 1.75rem;
-    font-weight: 300;
-    margin: 0.2rem 0 0;
-    color: #94A3B8;
-}
-
-/* ------------------------------
-   Main Content
------------------------------- */
-
-.content {
-    max-width: 75vw;
-    margin: 4rem auto;
-    padding: 0 2rem;
-    text-align: center;
-}
-
-.content h2 {
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    color: #192643;
-}
-
-.content p, li, ul {
-    font-size: 1.6rem;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-/* ------------------------------
-   Section Cards
------------------------------- */
-
-.content-section {
-    margin: 6rem auto;
-    max-width: 900px;
-}
-
-.section-card {
-    display: grid;
-    grid-template-rows: auto auto;
-    row-gap: 2rem;
-
-    padding: 3rem;
-    border-radius: 20px;
+    justify-content: space-between;
     background-color: #ffffff;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    padding: 2% 5%;
+
 }
 
-.section-header {
-    margin: 0;
+nav {
+    background-color: #ffffff;
+}
+
+li, a, button{
+    font-family: "Montserrat";
+    font-size: 18px;
+    color:#000000;
+    text-decoration: none;
+}
+
+h1.nav_header a {
+    font-family: "Workbench", sans-serif;
     font-size: 3rem;
-    font-weight: 500;
-    text-align: center;
+    color: #383737;
+    text-decoration: none;
 }
 
-.section-body {
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 3rem;
-    align-items: start;
+.nav_links{
+    list-style: none;
 }
 
-.section-image {
-    width: 160px;
-    height: 240px;
-    border-radius: 10%;
-    object-fit: cover;
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
 }
 
-.section-text h1 {
+
+.nav_links li a {
+    transition: all 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+}
+
+.banner_links{
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.banner_links a{
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.banner_links a:hover i{
+    color: rgba(0, 136, 169, 0.8);
+    transform: scale(1.15);
+}
+
+/* -------------
+   Home Page
+------------- */
+body.home_page::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+}
+
+body.home_page{
+    background-image: url("images/map-export-none-grayscale.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1.home_page{
+    color:#383737;
+    font: "Montserrat";
     font-size: 3rem;
-    font-weight: 7000;
-    text-align: left;
-    margin: 0;
-}
-
-.section-text h2 {
-    font-size: 2.25rem;
-    font-weight: 300;
-    text-align: left;
-    margin: 0;
-}
-
-.section-text p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: left;
-    margin: 0;
-}
-
-.resume-button{
-    position: static;
-    color: #000000;
-
-    border-radius: 5px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border-color: #ffffff;
-}
-
-.fade-section {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.fade-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ------------------------------
-   Responsive Adjustments
------------------------------- */
-
-/*Tablet Sizing*/
-@media (max-width: 768px) {
-    /*banner format*/
-    .banner-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        text-align: center;
-    }
-
-    .banner-image {
-        margin: 0 auto;
-    }
-
-    .banner-text {
-        margin-top: 1rem;
-    }
-
-    .site-banner h1 {
-        font-size: 2.3rem;
-        text-align:left;
-    }
-
-    .site-banner h2 {
-        font-size: 1.8rem;
-        text-align:left;
-    }
-
-    .site-banner p {
-        font-size: 1rem;
-        text-align:left;
-    }
-
-    .content {
-        margin: auto auto;
-    }
-
-    /*Section cards format*/
-    .section-body {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .section-image {
-        margin: 0 auto;
-    }
-
-    .section-text {
-        text-align: left;
-    }
-}
-
-/*Smartphone sizing*/
-@media (max-width:600px){
-    .site-banner h1 {
-        font-size: 2rem;
-        text-align:left;
-    }
-
-    .site-banner h2 {
-        font-size: 1.5rem;
-        text-align:left;
-    }
-
-    .site-banner p {
-        font-size: 0.9rem;
-        text-align:left;
-    }
-}
-
-/*Small phone sizing*/
-@media (max-width: 480px) {
-    .banner-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .banner-text h2 {
-        font-size: 1.3rem;
-    }
-
-    .banner-text p {
-        font-size: 0.7rem;
-    }
+    position: center center;
 }
