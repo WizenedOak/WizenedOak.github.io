@@ -94,7 +94,7 @@ body.home_page::before{
 }
 
 body.home_page{
-    background-image: url("images/map-export-none-grayscale.png");
+    background-image: url("images/dc_map_grayscale.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
