@@ -41,7 +41,7 @@ li, a, button{
 
 h1.nav_header a {
     font-family: "Workbench", sans-serif;
-    font-size: clamp(1.3rem, 4vw, 3rem);
+    font-size: clamp(0.9rem, 4vw, 3rem);
     color: #383737;
     text-decoration: none;
 }
