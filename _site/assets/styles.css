@@ -124,13 +124,12 @@ h1.page_layout{
 
 .home_content h1{
     font-size: clamp(5rem, 20vw, 12rem);
-    font-family: "Edu NSW ACT Cursive", cursive;
     font-weight: 600;
     color: transparent;
     background-image: linear-gradient(#000000, #000000);
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-position: -50rem 0%;
+    background-position: -70rem 0%;
 
     animation: welcomeColor 3s 1s linear 1 forwards;
 }
