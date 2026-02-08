@@ -1,7 +1,7 @@
 /* --------------------
    Global Styles
 -------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Workbench&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:wght@100..900&family=Workbench&display=swap');
 
 * {
     box-sizing: border-box;
@@ -88,10 +88,7 @@ h1.nav_header a {
     transform: scale(1.15);
 }
 
-/* -------------
-   Home Page
-------------- */
-body.home_page::before{
+body.page_layout::before{
     content: "";
     position: fixed;
     inset: 0;
@@ -99,7 +96,7 @@ body.home_page::before{
     z-index: -1;
 }
 
-body.home_page{
+body.page_layout{
     background-image: url("/images/dc_map_grayscale.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -107,11 +104,74 @@ body.home_page{
     background-attachment: fixed;
 }
 
-h1.home_page{
+h1.page_layout{
     color:#383737;
     font: "Montserrat";
     font-size: 3rem;
     position: center center;
+}
+
+/* -------------
+   Home Page
+------------- */
+.home_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home_content h1{
+    font-size: clamp(5rem, 20vw, 12rem);
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-weight: 600;
+    color: transparent;
+    background-image: linear-gradient(#000000, #000000);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -50rem 0%;
+
+    animation: welcomeColor 3s 1s linear 1 forwards;
+}
+
+p.welcome_text{
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    font-weight:800;
+    margin-top: 1rem;
+
+    color: transparent;
+    background-image: linear-gradient(#000000, #000000);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 -8rem;
+
+    animation: textColor 3s 4s linear 1 forwards;
+}
+
+p.name_text{
+    font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+    font-weight:800;
+
+    color: transparent;
+    background-image: linear-gradient(#000000, #000000);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 -3rem;
+
+    animation: textColor 2s 6s linear 1 forwards;
+}
+
+@keyframes welcomeColor {
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes textColor {
+    100% {
+        background-position: 0 100%;
+    }
 }
 
 /* -------------
@@ -169,6 +229,15 @@ h1.home_page{
 /* ----------------------
    Screen Size Sizing
 ---------------------- */
+@media(max-width:922px){
+     li, a {
+        font-size: 1.3rem;
+    }
+    .banner_links {
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+}
 
 @media (max-width: 780px) {
 
