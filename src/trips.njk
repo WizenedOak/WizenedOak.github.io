@@ -5,52 +5,15 @@ layout: layout.njk
 
 <section class="trips_card_container">
 
-  <div class="trips_card">
-    <img
-      src="/images/trip_highlights/portugal_highlight.JPG"
-      alt="Highlight photo from my Portugal trip"
-      loading="lazy"
-    >
-    <div class="trips_card_content">
-      <h3>Portugal</h3>
-      <p>
-        Spent New Years 2026 in Portugal. This was my first time in the country
-        and it certainly won’t be my last. I got to see Lisbon and Porto and
-        loved every bit of it.
-      </p>
+  {% for trip in trips %}
+    <div class="trips_card">
+      <img src="{{ trip.img }}" alt="{{ trip.alt }}" loading="lazy">
+      <div class="trips_card_content">
+        <h3>{{ trip.title }}</h3>
+        <p>{{ trip.description }}</p>
+      </div>
     </div>
-  </div>
+  {% endfor %}
 
-  <div class="trips_card">
-    <img
-      src="/images/trip_highlights/london_highlight.JPG"
-      alt="Highlight photo from my London trip"
-      loading="lazy"
-    >
-    <div class="trips_card_content">
-      <h3>London</h3>
-      <p>
-        Went to the sunny UK to visit a friend. Despite what you might believe,
-        the weather was wonderful. I spent my days sightseeing and enjoying a
-        nice pint of Guinness.
-      </p>
-    </div>
   </div>
-
-  <div class="trips_card">
-    <img
-      src="/images/trip_highlights/japan_highlight.JPG"
-      alt="Highlight photo from my Japan trip"
-      loading="lazy"
-    >
-    <div class="trips_card_content">
-      <h3>Japan</h3>
-      <p>
-        Finally got around to visiting Japan. This trip was unlike any I had
-        taken before. I loved learning about the culture, history, and getting
-        to reconnect with a close friend from high school.
-      </p>
-    </div>
-  </div>
-
 </section>

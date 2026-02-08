@@ -9,4 +9,4 @@ All the best,
 Emad (Aleks) Haskett
 
 ## Information:
-This is a pretty simple website. It is built using almost entirely HTML and CSS for elements and styling with some javascript utilized for animations/button etc. 
+This is a pretty simple website. It is built using almost entirely HTML and CSS for elements and styling. I utilize njk and eleventy in order to prebuild all components in the website and reduce repetitiveness of my code.
