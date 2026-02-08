@@ -116,11 +116,12 @@ h1.home_page{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 7rem;
+    margin-bottom: 7rem;
 }
 
 .trips_card{
     width: 325px;
-    height: 420px;
+    height: 350px;
     background-color: #f0f0f0;
     border-radius: 1rem;
     overflow: hidden;
@@ -130,9 +131,12 @@ h1.home_page{
     display: flex;
     flex-direction: column;
 }
+.trips_card:hover{
+    transform: scale(1.05);
+}
 
 .trips_card img{
-    height: 40%;
+    height: 50%;
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -156,18 +160,6 @@ h1.home_page{
     overflow-y: auto;
     margin-bottom: 1rem;
 }
-
-.trips_card_content .btn{
-    display: inline-block;
-    padding: 1rem 2rem;
-    color:#f0f0f0;
-    background-color: #333333;
-    text-decoration: none;
-    border-radius: 1rem;
-    
-}
-
-
 /* ----------------------
    Screen Size Sizing
 ---------------------- */
