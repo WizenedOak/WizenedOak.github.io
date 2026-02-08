@@ -25,7 +25,13 @@ header{
     background-color: #ffffff;
     align-items: center;
     padding: 2% 5%;
+}
 
+footer{
+    flex-direction: column;
+    display:flex;
+    background-color: #ffffff;
+    align-items: center;
 }
 
 nav {
