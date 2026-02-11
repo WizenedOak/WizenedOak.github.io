@@ -379,6 +379,10 @@ p.name_text {
     margin-top: 0.5rem;
 }
 
+.info_content p a:hover {
+    color: #0088a9
+}
+
 .info_icons {
     display: flex;
     flex-wrap: wrap;
