@@ -3,57 +3,55 @@ title: Website Info
 layout: layout.njk
 ---
 
-{# Website Info vision: 
-Nothing too fancy here, I want there to just be card with a description of how the website was built, 
-technologies used, and credit given.
-
-Credits: 
-- Background map(https://mapstyler.dev4pgh.com/)
-- Used for examples on design
-    - https://www.jareddillard.com/
-    - https://www.victoriapuck.com/
-- various online resources for how to create and design various components
-
-Maybe icons for the tech used (HTML, CSS, Nunjucks, 11ty, and JS) and when the icons are clicked it takes you to the home
-page of the documentation for that tech.
-#}
-
 <section class="info_card_container">
     <div class="info_card">
-        <h1>Website Info</h1>
-        <p>
-            Thank you for taking the time to look at my website. Alot of time went into the designing, coding, and 
-            content creating for it, with me going through multiple iterations of it all. So it means a lot to me 
-            that you took the time to explore and appreciate it. As ever, perfect is the enemy of good and I had to
-            eventually stop coding, but this site is always a work in progress, if you notice anything or have any 
-            suggestions feel free to reach out to me and let me know!
-            <br><br>
-            This website was made using HTML, Nunjucks, and some JavaScript for functionality and components, 
-            CSS for styling, 11ty for static site generation, and github actions for building and deploying the site.
-            More details on the technologies used can be seen by clicking the icons below. If you would like to see the 
-            source code please click the github icon below!
-            <br><br>
-            As always, this site was not created in a vaccuum and I would like to give credit where it is due.
-            <br>
-            Firstly, the background map was created using https://mapstyler.dev4pgh.com/ created by the Dev4PGH team.
-            <br>
-            Secondly, design inspiration came from a variety of places with the main sources of inspiration being from:
-            <br>
-            <a href="https://www.victoriapuckkaram.com/" target="_blank" rel="noopener noreferrer">- https://www.victoriapuckkaram.com/</a>
-            <br>
-            <a href="https://www.jareddillard.com/" target="_blank" rel="noopener noreferrer">- https://www.jareddillard.com/</a>
-            <br>
-            Finally, I utilized a wide variety of online resources and tutorials to figure out how to design various components
-            in this code. Without these sources this site would likely not have gotten very far off the ground, and despite not
-            being able to list them all due to the vast amount, I would like to thank them regardless.
+        <div class="info_content">
+            <h2>About This Site</h2>
+            <p>
+                Thank you for taking the time to look at my website. Alot of time went into the designing, coding, and 
+                content creating for it, with me going through multiple iterations of it all. So it means a lot to me 
+                that you took the time to explore and appreciate it. As ever, perfect is the enemy of good and I had to
+                eventually stop coding, but this site is always a work in progress, if you notice anything or have any 
+                suggestions feel free to reach out to me and let me know!
+            </p>
+
+        </div>
+
+        <div class="info_content">
+            <h2>Tools Used</h2>
+            <p>
+                This website was made using HTML, Nunjucks, and some JavaScript for functionality and components, 
+                CSS for styling, 11ty for static site generation, and github actions for building and deploying the site.
+                More details on the technologies used can be seen by clicking the icons below. If you would like to see the 
+                source code please click the github icon below!
             </p>
             <div class="info_icons">
                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-html5 fa-2xl"></i></a>
-                <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener noreferrer"><img src="/images/Nunjucks_Icons.png" alt="Nunjucks Logo"></i></a>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-js fa-2xl"></i></a>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-css3 fa-2xl"></i></i></a>
-                <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer"><img src="#" alt="11ty Logo"></a>
                 <a href="https://github.com/WizenedOak/WizenedOak.github.io" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-2xl"></i></a>
+                <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener noreferrer"><img src="/images/nunjucks.svg" alt="Nunjucks Logo"></i></a>
+                <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer"><img src="/images/eleventy.svg" alt="11ty Logo"></a>
             </div>
+        </div>
+
+        <div class="info_content">
+            <h2>Acknowledgements</h2>
+            <p>
+                As always, this site was not created in a vaccuum and I would like to give credit where it is due.
+                <br>
+                Firstly, the background map was created using https://mapstyler.dev4pgh.com/ created by the Dev4PGH team.
+                <br>
+                Secondly, design inspiration came from a variety of places with the main sources of inspiration being from:
+                <br>
+                <a href="https://www.victoriapuckkaram.com/" target="_blank" rel="noopener noreferrer">- https://www.victoriapuckkaram.com/</a>
+                <br>
+                <a href="https://www.jareddillard.com/" target="_blank" rel="noopener noreferrer">- https://www.jareddillard.com/</a>
+                <br>
+                Finally, I utilized a wide variety of online resources and tutorials to figure out how to design various components
+                in this code. Without these sources this site would likely not have gotten very far off the ground, and despite not
+                being able to list them all due to the vast amount, I would like to thank them regardless.
+            </p>
+        </div>
     </div>
 </section>

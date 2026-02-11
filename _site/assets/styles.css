@@ -319,11 +319,17 @@ p.name_text {
 }
 
 .info_card{
+    max-width: 900px;
+    width: 100%;
+
     background-color: #f0f0f0;
+    
+
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0rem 0.3rem 0.8rem rgba(0,0,0,0.6);
-    margin: 3rem 3rem
+    margin: 3rem 3rem;
+    padding-bottom: 2rem;
 }
 
 .info_card h1{
@@ -353,17 +359,32 @@ p.name_text {
     transition: all 0.3s ease 0s;
 }
 
-.info_card a:hover{
-    color: rgba(0, 136, 169, 0.8);
-    transform: scale(1.15);
+.info_content {
+    padding: 2rem 3rem;
+    text-align: left;
 }
 
-.info_icons{
+.info_content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.info_content h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0088a9;
+    margin-top: 0.5rem;
+}
+
+.info_icons {
     display: flex;
-    flex: row;
-    gap: 1.2rem;
-    padding: 0rem 2rem 2rem 2rem;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .info_icons a{
@@ -373,9 +394,19 @@ p.name_text {
     transition: all 0.3s ease 0s;
 }
 
-.info_icons a:hover i{
-    color: rgba(0, 136, 169, 0.8);
-    transform: scale(1.15);
+.info_icons i,
+.info_icons img {
+    font-size: 3rem;
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.info_icons a:hover i,
+.info_icons a:hover img {
+    transform: scale(1.5);
+    filter: brightness(1.1);
 }
 
 /* ----------------------------------------------------------
