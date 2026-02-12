@@ -1,18 +1,27 @@
 [
   {
     "title": "Portugal",
+    "year": "2026",
+    "location": "Lisbon & Porto",
+    "duration": "10 Days",
     "img": "/images/trip_highlights/portugal_highlight.JPG",
     "alt": "Highlight photo from my Portugal trip",
     "description": "Spent New Years 2026 in Portugal. This was my first time in the country and it certainly won’t be my last. I got to see Lisbon and Porto and loved every bit of it."
   },
   {
-    "title": "London",
+    "title": "United Kingdom",
+    "year": "2025",
+    "location": "London",
+    "duration": "3 Days",
     "img": "/images/trip_highlights/london_highlight.JPG",
     "alt": "Highlight photo from my London trip",
     "description": "Went to the sunny UK to visit a friend. Despite what you might believe, the weather was wonderful. I spent my days sightseeing and enjoying a nice pint of Guinness."
   },
   {
     "title": "Japan",
+    "year": "2026",
+    "location": "Tokyo, Kyoto, Osaka",
+    "duration": "14 Days",
     "img": "/images/trip_highlights/japan_highlight.JPG",
     "alt": "Highlight photo from my Japan trip",
     "description": "Finally got around to visiting Japan. This trip was unlike any I had taken before. I loved learning about the culture, history, and getting to reconnect with a close friend from high school."
