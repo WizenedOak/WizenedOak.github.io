@@ -1,20 +1,26 @@
 [
   {
-    "title": "Project 1",
+    "title": "Travel Companion App",
+    "link": "https://github.com/yourusername/travel-app",
     "img": "/images/trip_highlights/portugal_highlight.JPG",
     "alt": "Highlight photo from my Portugal trip",
-    "description": "Worked on project 1 tirelessly, never allowing myself a moment of rest until I was able to complete it. I needed to...nay I yearned to finish it. In the end...I was not able to start it. But like srsly this will be the spot for my travel app, meant to be like a combo of been and idk some sort of photo collection/shared album type jawn."
+    "description": "A travel journaling and location tracking app that blends curated highlights with shared photo albums. Designed to make documenting and reliving trips effortless and visually immersive.",
+    "tech": ["React", "Node.js", "Express", "MongoDB", "REST API"]
   },
   {
-    "title": "Project 2",
+    "title": "SEPTA Transit Redesign",
+    "link": "https://github.com/yourusername/septa-app",
     "img": "/images/trip_highlights/london_highlight.JPG",
     "alt": "Highlight photo from my London trip",
-    "description": "This will be my public transit apps spot, most probably just going to be a septa app. I just want to see better functionality from the current septa app as I feel that it is really lacking in a couple areas: planning a trip (Like I hate that I can't specify what form of transport I want to use, also why doesnt it just use my location isntead of me constantly having to put in an address), finding a schedule (like why do I have to specify both line and direction like damn just show me for station), and finally finding out the balance of my KeyCard (IDK if this one will be possible as it is financial data but I'll see what I can do)"
+    "description": "A reimagined public transit experience focused on intuitive trip planning, live location integration, and streamlined schedule discovery. Built to solve usability frustrations in the current SEPTA app.",
+    "tech": ["JavaScript", "API Integration", "Geolocation", "UI/UX Design"]
   },
   {
-    "title": "Project 3",
+    "title": "Ultra-Wideband Tracking System",
+    "link": "https://github.com/yourusername/uwb-project",
     "img": "/images/trip_highlights/japan_highlight.JPG",
     "alt": "Highlight photo from my Japan trip",
-    "description": "This will be where I put the info about my UWB project from college. That was a lot of work and I'll be damned if it isn't listed here. Also I feel like the documentation for that one was so good so like why would I not use it and showcase some insane doucmentation and cool coding at the same time. But bottom of the list cause it is not polished at all."
+    "description": "A precision indoor positioning system using UWB communication. Designed, implemented, and fully documented from hardware setup to signal processing and calibration algorithms.",
+    "tech": ["Embedded C", "Signal Processing", "Python", "Hardware Integration"]
   }
 ]
