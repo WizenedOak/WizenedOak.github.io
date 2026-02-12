@@ -132,7 +132,7 @@ h1.page_layout{
     -webkit-background-clip: text;
     background-position: -70rem 0%;
 
-    animation: welcomeColor 3.5s 1s linear 1 forwards;
+    animation: welcomeColor 2.8s 1s linear 1 forwards;
 }
 
 p.welcome_text {
@@ -145,7 +145,7 @@ p.welcome_text {
 
     width: 0;
     animation:
-        typing 5s forwards 4.5s,
+        typing 3s forwards 4s,
         cursor 0.5s step-end infinite alternate 2.5s;
 }
 
@@ -158,7 +158,7 @@ p.name_text {
     overflow: hidden;
     width: 0;
     animation:
-        typing 3s forwards 8s,
+        typing 3s forwards 6s,
         cursor 0.5s step-end infinite alternate 5.5s;
 }
 
@@ -244,7 +244,7 @@ p.name_text {
     
     opacity: 0;
     transform: translateY(40px);
-    animation: fadeUp 0.8s 1.2s ease forwards;
+    animation: fadeUp 0.8s 0.8s ease forwards;
 }
 
 .trips_card:hover{
@@ -341,7 +341,7 @@ p.name_text {
 
     opacity: 0;
     transform: translateY(40px);
-    animation: fadeUp 0.8s 1.2s ease forwards;
+    animation: fadeUp 0.8s 0.8s ease forwards;
 }
 
 .projects_card:hover {
