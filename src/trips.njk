@@ -13,6 +13,7 @@ layout: layout.njk
 <section class="trips_card_container">
     {% for trip in trips %}
         <div class="trips_card">
+            <script type="application/json" class="gallery-data">{{ trip.gallery | dump | safe }}</script>
             <img src="{{ trip.img }}" alt="{{ trip.alt }}" loading="lazy">
             <div class="trips_card_content">
                 <h3>{{ trip.title }}</h3>
@@ -26,3 +27,149 @@ layout: layout.njk
         </div>
     {% endfor %}
 </section>
+
+<div class="trip_modal" id="tripModal">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+        <button class="modal_close">&times;</button>
+
+        <button class="modal_nav prev">&#10094;</button>
+
+        <div class="modal_image_wrapper">
+            <img id="modalImage" src="" alt="">
+            <div class="modal_caption" id="modalCaption"></div>
+            <div class="modal_dots" id="modalDots"></div>
+        </div>
+
+        <button class="modal_nav next">&#10095;</button>
+    </div>
+</div>
+
+
+{# Modal javascript #}
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const cards = document.querySelectorAll(".trips_card");
+        const modal = document.getElementById("tripModal");
+        const modalImage = document.getElementById("modalImage");
+        const modalCaption = document.getElementById("modalCaption");
+        const modalDots = document.getElementById("modalDots");
+
+        const closeBtn = document.querySelector(".modal_close");
+        const overlay = document.querySelector(".modal_overlay");
+        const prevBtn = document.querySelector(".modal_nav.prev");
+        const nextBtn = document.querySelector(".modal_nav.next");
+
+        let gallery = [];
+        let currentIndex = 0;
+        let startX = 0;
+
+        function openModal(newGallery) {
+            gallery = newGallery || [];
+            currentIndex = 0;
+
+            if (!gallery.length) {
+            modalImage.src = "";
+            modalCaption.textContent = "No images available.";
+            prevBtn.style.display = "none";
+            nextBtn.style.display = "none";
+            modalDots.innerHTML = "";
+            } else {
+            prevBtn.style.display = "block";
+            nextBtn.style.display = "block";
+            createDots();
+            updateImage();
+            }
+
+            document.body.style.overflow = "hidden";
+            modal.classList.add("active");
+        }
+
+        function closeModal() {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        function updateImage() {
+            const item = gallery[currentIndex];
+            modalImage.src = item.src;
+            modalCaption.textContent = item.caption || "";
+            updateDots();
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % gallery.length;
+            updateImage();
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+            updateImage();
+        }
+
+        function createDots() {
+            modalDots.innerHTML = "";
+            gallery.forEach((_, index) => {
+            const dot = document.createElement("span");
+            dot.addEventListener("click", () => {
+                currentIndex = index;
+                updateImage();
+            });
+            modalDots.appendChild(dot);
+            });
+        }
+
+        function updateDots() {
+            const dots = modalDots.querySelectorAll("span");
+            dots.forEach(dot => dot.classList.remove("active"));
+            if (dots[currentIndex]) {
+            dots[currentIndex].classList.add("active");
+            }
+        }
+
+        // Swipe Support
+        modalImage.addEventListener("touchstart", e => {
+            startX = e.touches[0].clientX;
+        });
+
+        modalImage.addEventListener("touchend", e => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > 50) {
+            diff > 0 ? showNext() : showPrev();
+            }
+        });
+
+        // Keyboard Navigation
+        document.addEventListener("keydown", e => {
+            if (!modal.classList.contains("active")) return;
+
+            if (e.key === "ArrowRight") showNext();
+            if (e.key === "ArrowLeft") showPrev();
+            if (e.key === "Escape") closeModal();
+        });
+
+        // Card Click
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+            const scriptTag = card.querySelector(".gallery-data");
+            if (!scriptTag) return openModal([]);
+
+            try {
+                const parsed = JSON.parse(scriptTag.textContent);
+                openModal(parsed);
+            } catch {
+                openModal([]);
+            }
+            });
+        });
+
+        closeBtn.addEventListener("click", closeModal);
+        overlay.addEventListener("click", closeModal);
+        nextBtn.addEventListener("click", showNext);
+        prevBtn.addEventListener("click", showPrev);
+
+    });
+</script>

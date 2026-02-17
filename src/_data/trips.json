@@ -6,7 +6,37 @@
     "duration": "10 Days",
     "img": "/images/trip_highlights/portugal_highlight.JPG",
     "alt": "Highlight photo from my Portugal trip",
-    "description": "Spent New Years 2026 in Portugal. This was my first time in the country and it certainly won’t be my last. I got to see Lisbon and Porto and loved every bit of it."
+    "description": "Spent New Years 2026 in Portugal. This was my first time in the country and it certainly won’t be my last. I got to see Lisbon and Porto and loved every bit of it.",
+    "gallery":[
+      {
+        "src": "/images/trip_photos/portugal/portugal1.JPG",
+        "caption": "Sunrise view from the Luis I Bridge overlooking the Ribeira do Porto."
+      },
+      {
+        "src": "/images/trip_photos/portugal/portugal2.JPG",
+        "caption": "Bosco Porto at sunset, a beautiful outdoor garden bar."
+      },
+      {
+        "src": "/images/trip_photos/portugal/portugal3.JPG",
+        "caption": "Drinks with my cousin at Bosco Porto."
+      },
+      {
+        "src": "/images/trip_photos/portugal/portugal4.JPG",
+        "caption": "Selfie on the Luis I Bridge overlooking the Ribeira de Gaia."
+      },
+      {
+        "src": "/images/trip_photos/portugal/portugal5.JPG",
+        "caption": "Photo of the Santuario de Cristo Rei in Lisbon."
+      },
+      {
+        "src": "/images/trip_photos/portugal/portugal6.JPG",
+        "caption": "Photo of the Ponte 25 de Abril bridge."
+      },
+      {
+        "src": "/images/trip_photos/portugal/portugal7.JPG",
+        "caption": "Family selfie at the Castelo de Sao Jorge."
+      }
+    ]
   },
   {
     "title": "United Kingdom",
@@ -15,7 +45,29 @@
     "duration": "3 Days",
     "img": "/images/trip_highlights/london_highlight.JPG",
     "alt": "Highlight photo from my London trip",
-    "description": "Went to the sunny UK to visit a friend. Despite what you might believe, the weather was wonderful. I spent my days sightseeing and enjoying a nice pint of Guinness."
+    "description": "Went to the sunny UK to visit a friend. Despite what you might believe, the weather was wonderful. I spent my days sightseeing and enjoying a nice pint of Guinness.",
+    "gallery":[
+      {
+        "src": "/images/trip_photos/united_kingdom/uk1.JPG",
+        "caption": "Street in Kensigton just by Hyde Park."
+      },
+      {
+        "src": "/images/trip_photos/united_kingdom/uk2.JPG",
+        "caption": "Me and some friends snacking after a night out."
+      },
+      {
+        "src": "/images/trip_photos/united_kingdom/uk3.JPG",
+        "caption": "A photo of the Shard building in the evening."
+      },
+      {
+        "src": "/images/trip_photos/united_kingdom/uk4.JPG",
+        "caption": "Me and my friends at Big Ben."
+      },
+      {
+        "src": "/images/trip_photos/united_kingdom/uk5.JPG",
+        "caption": "A photo of Tower Bridge in the evening."
+      }
+    ]
   },
   {
     "title": "Japan",
@@ -24,7 +76,33 @@
     "duration": "14 Days",
     "img": "/images/trip_highlights/japan_highlight.JPG",
     "alt": "Highlight photo from my Japan trip",
-    "description": "Finally got around to visiting Japan. This trip was unlike any I had taken before. I loved learning about the culture, history, and getting to reconnect with a close friend from high school."
+    "description": "Finally got around to visiting Japan. This trip was unlike any I had taken before. I loved learning about the culture, history, and getting to reconnect with a close friend from high school.",
+    "gallery":[
+      {
+        "src": "/images/trip_photos/japan/japan1.JPG",
+        "caption": "Festival me and my friend encountered in Shinjuku, Tokyo."
+      },
+      {
+        "src": "/images/trip_photos/japan/japan2.JPG",
+        "caption": "Side street in Tokyo."
+      },
+      {
+        "src": "/images/trip_photos/japan/japan3.JPG",
+        "caption": "Red gate pathway at Fushimi Inari Taisha in Kyoto."
+      },
+      {
+        "src": "/images/trip_photos/japan/japan4.JPG",
+        "caption": "View of the countryside from the Mt Fuji Express train."
+      },
+      {
+        "src": "/images/trip_photos/japan/japan5.JPG",
+        "caption": "Side street in Kyoto in the rain."
+      },
+      {
+        "src": "/images/trip_photos/japan/japan6.JPG",
+        "caption": "Rainy and foggy hike down from Mt Fuji."
+      }
+    ]
   },
   {
     "title": "Germany",
@@ -33,24 +111,94 @@
     "duration": "8 Days",
     "img": "/images/trip_highlights/germany_highlight.JPG",
     "alt": "Highlight photo from my Germany trip",
-    "description": "As a part of my grad trip I decided to visit my friend in Germany. Perfect timing too as it was during the Euro Cup hosted in Germany."
+    "description": "As a part of my grad trip I decided to visit my friend in Germany. Perfect timing too as it was during the Euro Cup hosted in Germany.",
+    "gallery":[
+      {
+        "src": "/images/trip_photos/germany/germany1.JPG",
+        "caption": "Clock tower in Salzburg(In Austria)."
+      },
+      {
+        "src": "/images/trip_photos/germany/germany2.JPG",
+        "caption": "Me and my freind celebrating Germany's win against Scotland in the opening Euro 2024 Football match."
+      },
+      {
+        "src": "/images/trip_photos/germany/germany3.JPG",
+        "caption": "Photo of the Eisbach in the Englischer Garten in Munich at sunset."
+      },
+      {
+        "src": "/images/trip_photos/germany/germany4.JPG",
+        "caption": "Photo of me and my friends at Olympia near Regensburg."
+      },
+      {
+        "src": "/images/trip_photos/germany/germany5.JPG",
+        "caption": "Photo from an open viewing area in Munich for the Euro 2024 match of Germany vs Hungary."
+      }
+    ]
   },
   {
     "title": "Switzerland",
     "year": "2024",
     "location": "Geneva, Bern, Zurich",
     "duration": "12 Days",
-    "img": "/images/trip_highlights/switzerland_highlight.JPG",
+    "img": "/images/trip_highlights/switzerland_highlight.jpg",
     "alt": "Highlight photo from my Switzerland trip",
-    "description": "Went to Switzerland with my sister. This might be one of my favorite trips in recent memory, the cities and weather were beautiful. I also got a chance to use my German to get around which was so cool."
+    "description": "Went to Switzerland with my sister. This might be one of my favorite trips in recent memory, the cities and weather were beautiful. I also got a chance to use my German to get around which was so cool.",
+    "gallery":[
+      {
+        "src": "/images/trip_photos/switzerland/switzerland1.JPG",
+        "caption": "Photo taken of Geneva from Cathedrale Saint-Pierre."
+      },
+      {
+        "src": "/images/trip_photos/switzerland/switzerland2.JPG",
+        "caption": "Photo of myself taken by sister in Geneva."
+      },
+      {
+        "src": "/images/trip_photos/switzerland/switzerland3.JPG",
+        "caption": "Street in Bern."
+      },
+      {
+        "src": "/images/trip_photos/switzerland/switzerland4.JPG",
+        "caption": "Photo of Interlaken take from Harder Kulm."
+      },
+      {
+        "src": "/images/trip_photos/switzerland/switzerland5.JPG",
+        "caption": "Photo of Zytglogge clock tower in Bern."
+      }
+    ]
   },
   {
     "title": "Spain",
     "year": "2024",
     "location": "Madrid, Seville, Valencia, Barcelona",
     "duration": "12 Days",
-    "img": "/images/trip_highlights/spain_highlight.JPG",
+    "img": "/images/trip_highlights/spain_highlight.jpg",
     "alt": "Highlight photo from my Spain trip",
-    "description": "Decided to go on a grad trip to Europe starting with Spain. Got to see so much of the country but it still wasn't enough. Of this trip Madrid and Seville were definently my favorite."
+    "description": "Decided to go on a grad trip to Europe starting with Spain. Got to see so much of the country but it still wasn't enough. Of this trip Madrid and Seville were definently my favorite.",
+    "gallery":[
+      {
+        "src": "/images/trip_photos/spain/spain1.JPG",
+        "caption": "Photo of La Sagrada Familia in Barcelona."
+      },
+      {
+        "src": "/images/trip_photos/spain/spain2.JPG",
+        "caption": "Selfie of me and my family in Madrid."
+      },
+      {
+        "src": "/images/trip_photos/spain/spain3.JPG",
+        "caption": "Photo of the Plaza dec Espana in Seville"
+      },
+      {
+        "src": "/images/trip_photos/spain/spain4.JPG",
+        "caption": "Flags of Spain and Valencia on the beach."
+      },
+      {
+        "src": "/images/trip_photos/spain/spain5.JPG",
+        "caption": "Fresco in the Museu Nacional d'Art de Catalunya."
+      },
+      {
+        "src": "/images/trip_photos/spain/spain6.JPG",
+        "caption": "Tower in Valencia."
+      }
+    ]
   }
 ]
