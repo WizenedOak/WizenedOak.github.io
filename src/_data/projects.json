@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Ultra-Wideband Tracking System",
+    "link": "https://github.com/isaacbilsel/UWB",
+    "img": "/images/project_photos/uwb_photo.JPG",
+    "alt": "Photo of our UWB positioning system in action",
+    "description": "A precision indoor positioning system using UWB communication. Designed, implemented, and fully documented from hardware setup to signal processing and calibration algorithms.",
+    "tech": ["Embedded C", "Signal Processing", "Hardware Integration"]
+  }
+]

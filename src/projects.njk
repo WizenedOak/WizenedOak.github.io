@@ -1,0 +1,65 @@
+---
+title: My Projects
+layout: layout.njk
+---
+
+<section class="projects_intro">
+    <h2>Personal Projects</h2>
+    <p>
+        A collection of some of the systems and applications I've built, focused on usability and performance.
+    </p>
+</section>
+
+<section class="projects_card_container">
+    {% for project in projects %}
+        <a href="{{ project.link }}" target="_blank"
+           class="projects_card {% if loop.index % 2 == 0 %}reverse{% endif %}">
+            
+            <div class="projects_image_wrapper">
+                <img src="{{ project.img }}" alt="{{ project.alt }}" loading="lazy">
+            </div>
+
+            <div class="projects_card_content">
+                <h3>{{ project.title }}</h3>
+
+                <div class="tech_stack">
+                    {% for tech in project.tech %}
+                        <span class="tech_pill">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+
+                <p>{{ project.description }}</p>
+
+                <span class="view_project">View Project →</span>
+            </div>
+
+        </a>
+    {% endfor %}
+</section>
+
+{# 
+    {
+        "title": "Travel Companion App",
+        "link": "https://github.com/yourusername/travel-app",
+        "img": "/images/trip_highlights/portugal_highlight.JPG",
+        "alt": "Highlight photo from my Portugal trip",
+        "description": "A travel journaling and location tracking app that blends curated highlights with shared photo albums. Designed to make documenting and reliving trips effortless and visually immersive.",
+        "tech": ["React", "Node.js", "Express", "MongoDB", "REST API"]
+    },
+    {
+        "title": "SEPTA Transit Redesign",
+        "link": "https://github.com/yourusername/septa-app",
+        "img": "/images/trip_highlights/london_highlight.JPG",
+        "alt": "Highlight photo from my London trip",
+        "description": "A reimagined public transit experience focused on intuitive trip planning, live location integration, and streamlined schedule discovery. Built to solve usability frustrations in the current SEPTA app.",
+        "tech": ["JavaScript", "API Integration", "Geolocation", "UI/UX Design"]
+    },
+    {
+        "title": "Ultra-Wideband Tracking System",
+        "link": "https://github.com/yourusername/uwb-project",
+        "img": "/images/trip_highlights/japan_highlight.JPG",
+        "alt": "Highlight photo from my Japan trip",
+        "description": "A precision indoor positioning system using UWB communication. Designed, implemented, and fully documented from hardware setup to signal processing and calibration algorithms.",
+        "tech": ["Embedded C", "Signal Processing", "Python", "Hardware Integration"]
+    }
+#}
