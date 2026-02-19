@@ -154,15 +154,35 @@ layout: layout.njk
         // Card Click
         cards.forEach(card => {
             card.addEventListener("click", () => {
-            const scriptTag = card.querySelector(".gallery-data");
-            if (!scriptTag) return openModal([]);
+                // Get gallery data
+                const scriptTag = card.querySelector(".gallery-data");
+                let parsedGallery = [];
+                let tripTitle = "Unknown Trip";
 
-            try {
-                const parsed = JSON.parse(scriptTag.textContent);
-                openModal(parsed);
-            } catch {
-                openModal([]);
-            }
+                if (scriptTag) {
+                    try {
+                        parsedGallery = JSON.parse(scriptTag.textContent);
+                        if (parsedGallery[0] && parsedGallery[0].tripTitle) {
+                            tripTitle = parsedGallery[0].tripTitle;
+                        } else if (card.querySelector("h3")) {
+                            tripTitle = card.querySelector("h3").textContent;
+                        }
+                    } catch {
+                        parsedGallery = [];
+                        if (card.querySelector("h3")) tripTitle = card.querySelector("h3").textContent;
+                    }
+                }
+
+                // GA4 Event
+                if (typeof gtag === "function") {
+                    gtag("event", "trip_card_click", {
+                        event_category: "engagement",
+                        event_label: tripTitle
+                    });
+                }
+
+                // Open modal
+                openModal(parsedGallery);
             });
         });
 

@@ -13,7 +13,8 @@ layout: layout.njk
 <section class="projects_card_container">
     {% for project in projects %}
         <a href="{{ project.link }}" target="_blank"
-           class="projects_card {% if loop.index % 2 == 0 %}reverse{% endif %}">
+           class="projects_card {% if loop.index % 2 == 0 %}reverse{% endif %}"
+           onclick="gtag('event', 'project_click', {event_category: 'engagement', event_label: '{{ project.title }}', value: {{ loop.index }}})">
             
             <div class="projects_image_wrapper">
                 <img src="{{ project.img }}" alt="{{ project.alt }}" loading="lazy">
