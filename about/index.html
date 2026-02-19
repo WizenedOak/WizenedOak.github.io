@@ -7,6 +7,21 @@
 
         <link rel="stylesheet" href="/assets/styles.css" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+        
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BJS1ND4FZ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-4BJS1ND4FZ', {
+            anonymize_ip: true,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false,
+            client_storage: 'none'
+        });
+        </script>  
     </head>
 
     <body class="page_layout">
@@ -20,14 +35,16 @@
         <li><a href="/trips/">TRIPS</a></li>
         <li><a href="/projects/">PROJECTS</a></li>
         <li><a href="/info/">INFO</a></li>
-        <li><a href="/assets/Emad_Haskett_Resume.pdf" target="_blank" rel="noopener noreferrer">RESUME</a>
+        <li><a href="/assets/Emad_Haskett_Resume.pdf" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'resume_download', {event_category: 'engagement', event_label: 'resume'})">
+            RESUME
+        </a>
         </li>
     </nav>
 
     <div class="banner_links">
-        <a href="mailto:emadahaskett@gmail.com"><i class="fas fa-envelope fa-xl"></i></a>
-        <a href="https://www.linkedin.com/in/emad-haskett/" target="_blank"><i class="fab fa-linkedin-in fa-xl"></i></a>
-        <a href="https://github.com/WizenedOak" target="_blank"><i class="fab fa-github fa-xl"></i></a>
+        <a href="mailto:emadahaskett@gmail.com" onclick="gtag('event', 'outbound_click', {event_category: 'engagement', event_label: 'email'})"><i class="fas fa-envelope fa-xl"></i></a>
+        <a href="https://www.linkedin.com/in/emad-haskett/" target="_blank" onclick="gtag('event', 'outbound_click', {event_category: 'engagement', event_label: 'LinkedIn'})"><i class="fab fa-linkedin-in fa-xl"></i></a>
+        <a href="https://github.com/WizenedOak" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'outbound_click', {event_category: 'engagement', event_label: 'github'})"><i class="fab fa-github fa-xl"></i></a>
     </div>
 </header>
 
@@ -129,5 +146,29 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => observer.observe(section));
 </script>
         </main>
+        <script>
+            (function() {
+                let scrollMarks = [25, 50, 75, 100];
+                let triggered = {};
+
+                window.addEventListener('scroll', function() {
+                    let scrollTop = window.scrollY;
+                    let docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    let scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+                    scrollMarks.forEach(function(mark) {
+                        if (scrollPercent >= mark && !triggered[mark]) {
+                            triggered[mark] = true;
+
+                            gtag('event', 'scroll_depth', {
+                                event_category: 'engagement',
+                                event_label: mark + '%',
+                                value: mark
+                            });
+                        }
+                    });
+                });
+            })();
+        </script>
     </body>
 </html>
