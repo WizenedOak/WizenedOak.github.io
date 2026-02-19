@@ -7,6 +7,21 @@
 
         <link rel="stylesheet" href="/assets/styles.css" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+        
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BJS1ND4FZ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-4BJS1ND4FZ', {
+            anonymize_ip: true,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false,
+            client_storage: 'none'
+        });
+        </script>  
     </head>
 
     <body class="page_layout">
@@ -15,5 +30,29 @@
         <main>
         {{ content | safe }}
         </main>
+        <script>
+            (function() {
+                let scrollMarks = [25, 50, 75, 100];
+                let triggered = {};
+
+                window.addEventListener('scroll', function() {
+                    let scrollTop = window.scrollY;
+                    let docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    let scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+                    scrollMarks.forEach(function(mark) {
+                        if (scrollPercent >= mark && !triggered[mark]) {
+                            triggered[mark] = true;
+
+                            gtag('event', 'scroll_depth', {
+                                event_category: 'engagement',
+                                event_label: mark + '%',
+                                value: mark
+                            });
+                        }
+                    });
+                });
+            })();
+        </script>
     </body>
 </html>
