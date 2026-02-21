@@ -88,6 +88,12 @@ h1.nav_header a {
     transform: scale(1.15);
 }
 
+.page_layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 body.page_layout::before{
     content: "";
     position: fixed;
@@ -111,6 +117,27 @@ h1.page_layout{
     position: center center;
 }
 
+main {
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    font-size: 1rem;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+footer h2, footer h3 {
+    font-weight: 400;
+    margin: 0.1rem 0;
+    text-align: center;
+}
+
 /* ----------------------------------------------------------
                          Home Page
 ---------------------------------------------------------- */
@@ -132,7 +159,7 @@ h1.page_layout{
     -webkit-background-clip: text;
     background-position: -70rem 0%;
 
-    animation: welcomeColor 2.8s 1s linear 1 forwards;
+    animation: welcomeColor 2.3s 1s linear 1 forwards;
 }
 
 p.welcome_text {
@@ -145,7 +172,7 @@ p.welcome_text {
 
     width: 0;
     animation:
-        typing 3s forwards 4s,
+        typing 2s forwards 2.6s,
         cursor 0.5s step-end infinite alternate 2.5s;
 }
 
@@ -158,7 +185,7 @@ p.name_text {
     overflow: hidden;
     width: 0;
     animation:
-        typing 3s forwards 6s,
+        typing 2s forwards 4.3s,
         cursor 0.5s step-end infinite alternate 5.5s;
 }
 
@@ -347,31 +374,24 @@ p.name_text {
 }
 
 .trips_card img{
-    height: 50%;
+    height: 42%;
     width: 100%;
     object-fit: cover;
     object-position: center;
     flex-shrink: 0;
 }
 
-.trips_card_content{
+.trips_card_content {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.trips_card_content h3{
+.trips_card_content h3 {
     font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-}
-
-.trips_card_content p{
-    font-size: 1.5rem;
-    line-height: 1.3;
-    color: #555;
-
-    flex: 1;
-    overflow-y: auto;
-    margin-bottom: 1rem;
 }
 
 .trip_meta {
@@ -382,6 +402,24 @@ p.name_text {
     margin-bottom: 0.5rem;
     display: flex;
     gap: 1rem;
+}
+
+.trips_card_content p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 0.5rem; /* small spacing */
+}
+
+/* Force "View Photos" to bottom */
+.view_trip {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    color: #111;
+    margin-top: auto; /* pushes it to the bottom */
+    margin-bottom: 0.5rem; /* minimal space from card bottom */
+    transition: transform 0.3s ease;
 }
 
 /* ---------------- Modal ---------------- */
@@ -686,7 +724,7 @@ p.name_text {
     line-height: 1.3;
     text-align: left;
     overflow-y: auto;
-    padding: 3rem 3rem;
+    padding: 1.8rem 3rem;
     margin-bottom: 1rem;
 }
 
@@ -733,7 +771,7 @@ p.name_text {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .info_icons a{
